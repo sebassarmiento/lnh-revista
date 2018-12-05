@@ -1,0 +1,22 @@
+.navbar{
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar a{
+    font-family: 'Cinzel', serif;
+    color: rgba(255, 255, 255, 0.911);
+    transition: all 0.3s;
+    font-size: 1.2em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 100;
+    padding: 12px;
+    margin: 6px;
+    box-shadow: inset 0px -2px 0px 0px rgba(192, 34, 34, 0.75);
+}
+
+.navbar a:hover{
+    color: brown;
+    box-shadow: inset 0px -5px 0px 0px rgba(192, 34, 34, 0.75);
+}
