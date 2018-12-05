@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import { NavLink } from 'react-router-dom';
+import '../css/notaIndividual.css';
+import { Redirect } from 'react-router-dom';
+import Loader from '../utils/loader';
+import { Fade } from 'react-reveal';
 
 class NotaIndividual extends Component {
     constructor(props) {
@@ -25,20 +28,23 @@ class NotaIndividual extends Component {
         console.log(this.state.data)
 
         return (
+            <Fade top>
             <div className="nota-individual" >
-            <NavLink to="/" >Volver</NavLink>
+            <h4 className="volver-btn" onClick={() => this.setState({redirect: true})} ><i class="fas fa-arrow-left"></i> Volver</h4>
                 {
                     this.state.data ? <React.Fragment>
                         <h4>{this.state.data.categoria}</h4>
                         <h1>{this.state.data.titulo}</h1>
-                        <h3>{this.state.data.fecha}</h3>
+                        <h3 className="nota-individual-fecha" >{this.state.data.fecha}</h3>
                         <img src="http://elportaldelchacinado.com/wp-content/uploads/Por-qu%C3%A9-la-mayor%C3%ADa-de-las-botellas-de-vino-son-verdes-la-comunidad-de-los-vinos-el-portal-del-chacinado.jpg" />
                         <p>{this.state.data.texto}</p>
                     </React.Fragment>
                         :
-                        null
+                        <Loader />
                 }
+                {this.state.redirect ? <Redirect to="/" /> : null}
             </div>
+            </Fade>
         )
     }
 }
