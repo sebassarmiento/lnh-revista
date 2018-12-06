@@ -10,7 +10,7 @@ class New extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3000/notas')
+    fetch('https://lnhbackend.herokuapp.com/notas')
       .then(d => d.json())
       .then(res => {
         console.log(res)

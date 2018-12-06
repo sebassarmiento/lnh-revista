@@ -12,7 +12,7 @@ class NotaIndividual extends Component {
 
     componentDidMount() {
         console.log(this.props.location.pathname)
-        fetch(`http://localhost:3000${this.props.location.pathname}`)
+        fetch(`https://lnhbackend.herokuapp.com${this.props.location.pathname}`)
             .then(d => d.json())
             .then(res => {
                 console.log(res)
