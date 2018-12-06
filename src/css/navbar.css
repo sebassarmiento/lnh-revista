@@ -1,6 +1,15 @@
 .navbar{
     display: flex;
     justify-content: space-around;
+    transition: all 1s;
+}
+
+.navbar.scrolled{
+    position: sticky;
+    background-color: rgba(0, 0, 0, 0.822);
+    top: 0%;
+    z-index: 1000;
+    width: 100%;
 }
 
 .navbar a{
@@ -17,6 +26,11 @@
 }
 
 .navbar a:hover{
+    color: brown;
+    box-shadow: inset 0px -5px 0px 0px rgba(192, 34, 34, 0.75);
+}
+
+.navbar a.active{
     color: brown;
     box-shadow: inset 0px -5px 0px 0px rgba(192, 34, 34, 0.75);
 }

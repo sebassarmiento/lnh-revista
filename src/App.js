@@ -9,7 +9,7 @@ class App extends Component {
   render() {
     return (
       <div >
-        <h1 className="header-title" >LE NOUVEL HÉDONISMO</h1>
+        <h1 className="header-title" >LE NOUVEL HEDONISMO</h1>
         <BrowserRouter>
           <div>
             <Navbar />

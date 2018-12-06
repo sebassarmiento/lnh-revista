@@ -51,7 +51,7 @@ class New extends Component {
             <h3>REDES SOCIALES:</h3>
             <div>
               <a href="#!"><i className="fab fa-twitter tw-icon"></i></a>
-              <a href="#!" ><i class="fab fa-facebook fb-icon"></i></a>
+              <a href="#!" ><i className="fab fa-facebook fb-icon"></i></a>
             </div>
           </div>
         </div>

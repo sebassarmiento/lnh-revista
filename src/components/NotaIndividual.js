@@ -30,7 +30,7 @@ class NotaIndividual extends Component {
         return (
             <Fade top>
             <div className="nota-individual" >
-            <h4 className="volver-btn" onClick={() => this.setState({redirect: true})} ><i class="fas fa-arrow-left"></i> Volver</h4>
+            <h4 className="volver-btn" onClick={() => this.setState({redirect: true})} ><i className="fas fa-arrow-left"></i> Volver</h4>
                 {
                     this.state.data ? <React.Fragment>
                         <h4>{this.state.data.categoria}</h4>
