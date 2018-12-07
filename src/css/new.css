@@ -171,6 +171,7 @@
     font-size: 1em;
     transition: all 0.3s ease-in-out;
     box-shadow: 0px 10px 15px -6px rgba(0,0,0,0.2);
+    margin-top: 12px;
 }
 
 .new-column-2 .nota-preview .leer-mas-btn button:hover{
@@ -178,4 +179,15 @@
     background-color: rgba(122, 43, 34, 1);
     cursor: pointer;
     color: white;
+}
+
+
+@media (max-width: 800px) {
+    .new-column-1{
+        display: none;
+    }
+
+    .new-column-2 .nota-preview p{
+        display: none;
+    }
 }

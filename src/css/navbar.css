@@ -6,7 +6,7 @@
 
 .navbar.scrolled{
     position: sticky;
-    background-color: rgba(0, 0, 0, 0.822);
+    background-color: rgb(0, 0, 0);
     top: 0%;
     z-index: 1000;
     width: 100%;
@@ -33,4 +33,102 @@
 .navbar a.active{
     color: brown;
     box-shadow: inset 0px -5px 0px 0px rgba(192, 34, 34, 0.75);
+}
+
+.hamburguer{
+    display: none;
+}
+
+@media (max-width: 800px) {
+    .navbar{
+        position: relative;
+        display: block;
+    }
+
+    .navbar a{
+        display: block;
+        opacity: 0;
+        transform: scale(1, 0);
+    }
+
+    .navbar.scrolled{
+        position: relative;
+        background-color: transparent;
+        padding-top: 24px;
+    }
+
+    .navbar::before{
+        content: 'LE NOUVEL HEDONISMO';
+        position: relative;
+        top: 0vw;
+        left: 0vw;
+        font-weight: 800;
+    }
+
+    .navbar.opened-menu{
+        background-color: black;
+    }
+
+    .navbar.opened-menu a{
+        opacity: 1;
+        transform: scale(1, 1);
+        background-color: black;
+    }
+
+    .hamburguer{
+        display: block;
+        position: absolute;
+        top: 0%;
+        right: 0%;
+        background-color: azure;
+        height: 3px;
+        width: 22px;
+        border-radius: 2px;
+        transition: all 0.4s;
+        transform-origin: top center;
+    }
+
+    .hamburguer::before{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 6px;
+        right: 0%;
+        background-color: azure;
+        height: 3px;
+        width: 22px;
+        border-radius: 2px;
+        transform: all 0.4s;
+    }
+
+    .hamburguer::after{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 12px;
+        right: 0%;
+        background-color: azure;
+        height: 3px;
+        width: 22px;
+        border-radius: 2px;
+        transition: all 0.4s;
+        transform-origin: top center;
+    }
+
+    .hamburguer.opened{
+        transform: rotate(45deg);
+        top: 8px;
+        right: 0;
+    }
+
+    .hamburguer.hamburguer.opened::before{
+        opacity: 0;
+    }
+
+    .hamburguer.opened::after{
+        transform: rotate(90deg);
+        top: 2px;
+        right: -2px;
+        width: 23px;
+    }
 }

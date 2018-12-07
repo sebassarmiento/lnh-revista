@@ -19,3 +19,14 @@ body {
   color: aliceblue;
 }
 
+@media (max-width: 800px) {
+  body{
+    padding: 6px;
+    background: url('./img/chica.png') no-repeat fixed;
+    background-size: 100%;
+    background-color: black;
+    background-position-x: 0%;
+    background-position-y: 10vh;
+  }
+}
+
