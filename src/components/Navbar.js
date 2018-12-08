@@ -21,18 +21,34 @@ class Navbar extends Component {
         }
     }
 
+    navbarClass() {
+        if (this.state.open) {
+            return "navbar-mobile-open"
+        } else {
+            return "navbar-mobile-closed"
+        }
+    }
+
     render() {
         return (
-            <nav onClick={() => this.setState({ open: !this.state.open })} className={this.state.scrolled ? 'navbar scrolled' : this.state.open ? "navbar opened-menu" : 'navbar'} >
-                    <NavLink to="/" exact >New</NavLink >
-                    <NavLink to="/vinos" >Vinos</NavLink >
-                    <NavLink to="/gastronomia" >Gastronomia</NavLink >
-                    <NavLink to="/turismo" >Turismo</NavLink >
-                    <NavLink to="/cultura" >Cultura</NavLink >
-                    <NavLink to="/editorial" >Editorial</NavLink >
-                    <NavLink to="/contacto" >Contacto</NavLink >
-                <div className={this.state.open ? "hamburguer opened" : "hamburguer"} ></div>
+            <React.Fragment>
+            <nav className={this.navbarClass() + " navbar"} >
+                <NavLink to="/" exact >New</NavLink >
+                <NavLink to="/vinos" >Vinos</NavLink >
+                <NavLink to="/gastronomia" >Gastronomia</NavLink >
+                <NavLink to="/turismo" >Turismo</NavLink >
+                <NavLink to="/cultura" >Cultura</NavLink >
+                <NavLink to="/editorial" >Editorial</NavLink >
+                <NavLink to="/contacto" >Contacto</NavLink >
             </nav>
+            <div className="navbar-mobile" >
+                <div onClick={() => this.setState({ open: !this.state.open })} className="hamburguer" >
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+            </React.Fragment>
         )
     }
 }

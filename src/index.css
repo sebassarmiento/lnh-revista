@@ -21,7 +21,7 @@ body {
 
 @media (max-width: 800px) {
   body{
-    padding: 6px;
+    padding: 0px;
     background: url('./img/chica.png') no-repeat fixed;
     background-size: 100%;
     background-color: black;

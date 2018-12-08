@@ -35,104 +35,86 @@
     box-shadow: inset 0px -5px 0px 0px rgba(192, 34, 34, 0.75);
 }
 
-.hamburguer{
-    display: none;
-}
-
-/*
 
 @media (max-width: 800px) {
     .navbar{
-        position: relative;
         display: block;
+        transform-origin: top center;
+        position: fixed;
+        z-index: 10;
+        width: 100%;
+        background-color: green;
+        top: 10vh;
+        left: 0;
     }
 
     .navbar a{
         display: block;
-        opacity: 0;
+        background-color: black;
+    }
+
+    .navbar-mobile-open{
+        transform: scale(1, 1);
+    }
+
+    .navbar-mobile-closed{
         transform: scale(1, 0);
     }
 
-    .navbar.scrolled{
-        position: relative;
-        background-color: transparent;
-        padding-top: 24px;
-    }
-
-    .navbar::before{
-        content: 'LE NOUVEL HEDONISMO';
-        position: relative;
-        top: 0vw;
-        left: 0vw;
-        font-weight: 800;
-    }
-
-    .navbar.opened-menu{
-        background-color: black;
-    }
-
-    .navbar.opened-menu a{
-        opacity: 1;
-        transform: scale(1, 1);
-        background-color: black;
+    .navbar-mobile{
+        display: block;
+        position: sticky;
+        top: 0%;
+        right: 0%;
+        height: 10vh;
+        width: 100%;
+        background-color: red;
+        z-index: 10;
     }
 
     .hamburguer{
         display: block;
+        position: relative;
+        background-color: green;
+        top: 0px;
+        right: 0px;
+        height: 10vh;
+        width: 15vw;
+        float: right;
+        transition: all 2s;
+    }
+
+    .hamburguer div:nth-child(1){
+        height: 6px;
+        width: 65%;
+        background-color: purple;
         position: absolute;
-        top: 0%;
-        right: 0%;
-        background-color: azure;
-        height: 3px;
-        width: 22px;
-        border-radius: 2px;
-        transition: all 0.4s;
-        transform-origin: top center;
+        border-radius: 4px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 32%;
     }
 
-    .hamburguer::before{
-        content: '';
-        display: block;
+    .hamburguer div:nth-child(2){
+        height: 6px;
+        width: 65%;
+        background-color: purple;
         position: absolute;
-        top: 6px;
-        right: 0%;
-        background-color: azure;
-        height: 3px;
-        width: 22px;
-        border-radius: 2px;
-        transform: all 0.4s;
+        border-radius: 4px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 50%;
     }
 
-    .hamburguer::after{
-        content: '';
-        display: block;
+    .hamburguer div:nth-child(3){
+        height: 6px;
+        width: 65%;
+        background-color: purple;
         position: absolute;
-        top: 12px;
-        right: 0%;
-        background-color: azure;
-        height: 3px;
-        width: 22px;
-        border-radius: 2px;
-        transition: all 0.4s;
-        transform-origin: top center;
-    }
-
-    .hamburguer.opened{
-        transform: rotate(45deg);
-        top: 8px;
-        right: 0;
-    }
-
-    .hamburguer.hamburguer.opened::before{
-        opacity: 0;
-    }
-
-    .hamburguer.opened::after{
-        transform: rotate(90deg);
-        top: 2px;
-        right: -2px;
-        width: 23px;
+        border-radius: 4px;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        top: 70%;
     }
 }
 
-*/
