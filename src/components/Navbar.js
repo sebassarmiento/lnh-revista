@@ -42,7 +42,8 @@ class Navbar extends Component {
                 <NavLink to="/contacto" >Contacto</NavLink >
             </nav>
             <div className="navbar-mobile" >
-                <div onClick={() => this.setState({ open: !this.state.open })} className="hamburguer" >
+                <div className="mobile-title" >LE NOUVEL HEDONISMO</div>
+                <div onClick={() => this.setState({ open: !this.state.open })} className={this.state.open ? "hamburguer cross" : "hamburguer"} >
                     <div></div>
                     <div></div>
                     <div></div>
