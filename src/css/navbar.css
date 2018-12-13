@@ -36,6 +36,7 @@
 }
 
 
+/* NAVBAR MENU FOR MOBILE */
 @media (max-width: 800px) {
     .navbar{
         display: block;
